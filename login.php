@@ -6,8 +6,6 @@ $senha = $_POST['senha'];
 
 $sql = "SELECT * FROM tb_usuario WHERE login = '$login' and senha = '$senha'";
 $resultados = mysqli_query($conexao, $sql);
-$tudo = mysqli_fetch_assoc($resultados);
-$id = $tudo['id_usuario'];
 
 if (mysqli_num_rows($resultados) == 0) {
     // usuário não cadastrado
@@ -18,9 +16,12 @@ if (mysqli_num_rows($resultados) == 0) {
     
     // pegar o ID do cara que logou?
     // nome do cara que logou?
+    
+    $user = mysqli_fetch_assoc($resultados);
+    $id_usuario = $user['id_usuario'];
     session_start();
-    $_SESSION['username'] = $login; //trocar
-    $_SESSION['id_usuario'] = $id;
+    $_SESSION['username'] = $login;
+    $_SESSION['id_usuario'] = $id_usuario;
     header("Location: home.php");
 }
 ?>
