@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +11,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Aparições do Homem aranha</h1>
+    <h1>Filmes</h1>
 
     <a href="../home.php">Voltar</a> <br>
-    <p>Seu filme favorito não está cadastrado? <a href="form_aparicao.php">Cadastre-o</a>!</p> 
+    <p>Seu filme favorito não está cadastrado? <a href="form_filme.php">Cadastre-o</a>!</p> 
+    <a href='../comentarios/' id='comentarios'>Comentários</a>
     <?php
-
         require_once "../conexao.php";
 
         // SELECT * FROM tb_livro;
-        $sql = "SELECT * FROM tb_aparicao";
+        $sql = "SELECT * FROM tb_filme";
         $comando = mysqli_prepare($conexao, $sql);
 
         mysqli_stmt_execute($comando);
@@ -35,28 +30,19 @@
         // echo $resultados;
         // print_r($resultados);
 
-        while ($aparicao = mysqli_fetch_assoc($resultados)) {
-            $id_aparicao = $aparicao['id_aparicao'];
-            $foto = $aparicao['foto'];
-            $local = $aparicao['local'];
-            $descricao = $aparicao['descricao'];
-            $id_usuario = $aparicao['id_usuario'];
-            
-            // echo "$id_livro - $nome<br>";
-
+        while ($filme = mysqli_fetch_assoc($resultados)) {
+            $id_filme = $filme['id_filme'];
+            $_SESSION['id_filme'] = $id_filme;
+            $foto = $filme['foto'];
+            $nome = $filme['nome'];
+            $_SESSION['nome_filme'] = $nome;
+            $ano = $filme['ano'];
             echo "<div>";
-            echo "<p id='id'>$id_aparicao</p>";
+            echo "<p id='id'>$id_filme</p>";
             echo "<p id='foto'>$foto</p>";
-            echo "<p id='infos'>$local - $id_usuario</p>";
-            echo "<p id='descricao'>$descricao</p>";
+            echo "<p id='infos'>$nome - $ano</p>";
             echo "</div>";
-
-
         }
-        echo "</table>";
-
-
-
         mysqli_stmt_close($comando);    
     ?>
 </body>

@@ -1,9 +1,5 @@
 <?php
-session_start(); // precisa ser a PRIMEIRA coisa no arquivo
-
-if (!isset($_SESSION['username'])) {
-    die("Você precisa estar logado. <a href='../login.php'>Fazer login</a>");
-}
+session_start(); //precisa ser a PRIMEIRA coisa no arquivo
 
 $username = $_SESSION['username'];
 require_once "../conexao.php";
@@ -23,8 +19,12 @@ $resultados = mysqli_stmt_get_result($comando);
     <title>Aparições</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<h1>Aparições do Homem Aranha</h1>
+<a href='../home.php'>Voltar</a> <br>
+<p>Viu o Homem Aranha por aí? <a href='form_aparicao.php'>Faça sua postagem</a>!</p>
+
+</body>
 <?php
 while ($aparicao = mysqli_fetch_assoc($resultados)) {
     $id_aparicao = $aparicao['id_aparicao'];
@@ -43,10 +43,4 @@ while ($aparicao = mysqli_fetch_assoc($resultados)) {
 }
 mysqli_stmt_close($comando);
 ?>
-
-<h1>Aparições do Homem Aranha</h1>
-<a href='../home.php'>Voltar</a> <br>
-<p>Viu o Homem Aranha por aí? <a href='form_aparicao.php'>Faça sua postagem</a>!</p>
-
-</body>
 </html>
