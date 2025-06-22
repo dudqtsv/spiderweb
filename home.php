@@ -2,6 +2,7 @@
     require_once "conexao.php";
     session_start();
     $username = $_SESSION['username'];
+    $nome = $_SESSION['nome_usuario'];
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +26,15 @@
     <header>
         <img src="img/logo.png">
     </header>
-    <div>
+    <?php
+    echo"<div>";
+        echo"<p>Olá $nome! Seja bem vindo(a). 🕸️🕷️</p>";
+    echo"</div>";
+    ?>
+    <nav>
         <a href="aparicao/">Aparições</a>
         <a href="filme/">Filmes</a>
         <a href="personagem/">Personagens</a>
-    </div>
+    </nav>
 </body>
 </html>

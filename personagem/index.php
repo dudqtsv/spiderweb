@@ -14,7 +14,7 @@ session_start();
     <h1>Personagens</h1>
 
     <a href="../home.php">Voltar</a> <br>
-    <p>Seu personagem favorito não está cadastrado? <a href="form_inimigo.php">Cadastre-o</a>!</p> 
+    <p>Seu personagem favorito não está cadastrado? <a href="form_personagem.php">Cadastre-o</a>!</p> 
     <h2>Aliados</h2>
     <?php
         require_once "../conexao.php";
@@ -33,8 +33,8 @@ session_start();
             $foto = $aliado['foto'];
             $descricao = $aliado['descricao'];
             echo "<div>";
-            echo "<p id='id'>$id_aliado</p>";
-            echo "<p id='foto'>$foto</p>";
+            echo "<p id='foto'><img src='fotos/$foto'></p>";
+            echo "<p id='nome'>$nome</p>";
             echo "<p id='infos'>$descricao</p>";
             echo "</div>";
         }
@@ -58,8 +58,8 @@ session_start();
             $foto = $inimigo['foto'];
             $descricao = $inimigo['descricao'];
             echo "<div>";
-            echo "<p id='id'>$id_inimigo</p>";
-            echo "<p id='foto'>$foto</p>";
+            echo "<p id='foto'><img src='fotos/$foto'></p>";
+            echo "<p id='nome'>$nome</p>";
             echo "<p id='infos'>$descricao</p>";
             echo "</div>";
         }

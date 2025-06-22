@@ -27,14 +27,12 @@ $resultados = mysqli_stmt_get_result($comando);
 </body>
 <?php
 while ($aparicao = mysqli_fetch_assoc($resultados)) {
-    $id_aparicao = $aparicao['id_aparicao'];
     $foto = $aparicao['foto'];
     $local = $aparicao['local'];
     $descricao = $aparicao['descricao'];
     $id_usuario = $aparicao['id_usuario'];
 
     echo "<div>";
-    echo "<p id='id'>$id_aparicao</p>";
     echo "<p id='foto'><img src='fotos/$foto'></p>";
     echo "<p id='local'>$local</p>";
     echo "<p id='descricao'>$descricao</p>";

@@ -7,6 +7,10 @@
     session_start();
     $username = $_SESSION['username'];
     $id_usuario = $_SESSION['id_usuario'];
+    if (empty($nome) || empty($ano)){
+    header("Location: erro.html");
+    exit();
+}
     
 
     $nome_arquivo = $_FILES['foto']['name'];

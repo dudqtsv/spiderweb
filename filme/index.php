@@ -32,15 +32,13 @@ session_start();
 
         while ($filme = mysqli_fetch_assoc($resultados)) {
             $id_filme = $filme['id_filme'];
-            $_SESSION['id_filme'] = $id_filme;
-            $foto = $filme['foto'];
             $nome = $filme['nome'];
-            $_SESSION['nome_filme'] = $nome;
             $ano = $filme['ano'];
+            $foto = $filme['foto'];
+        
             echo "<div>";
-            echo "<p id='id'>$id_filme</p>";
-            echo "<p id='foto'>$foto</p>";
-            echo "<p id='infos'>$nome - $ano</p>";
+            echo "<p id='nome'><img src='nomes/$foto'></p>";
+            echo "<p id='foto'>$nome - $ano</p>";
             echo "</div>";
         }
         mysqli_stmt_close($comando);    

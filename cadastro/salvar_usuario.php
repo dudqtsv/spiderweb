@@ -1,9 +1,11 @@
 <?php
+session_start();
     require_once "../conexao.php"; 
     
     $login = $_GET['login'];
     $senha = $_GET['senha'];
     $nome = $_GET['nome'];
+    $_SESSION['nome_usuario'] = $nome;
 
     if (empty($login) || empty($senha) || empty($nome)) {
         header("Location: erro.html");
