@@ -1,16 +1,15 @@
 <?php
     require_once "../conexao.php"; 
-    
+    session_start();
+
     $tipo = $_POST['alimigo'];
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
 
-    session_start();
-
-    if (empty($nome) || empty($descricao)){
-    header("Location: erro.html");
-    exit();
-}
+        if (empty($nome) || empty($tipo)){
+        header("Location: erro.html");
+        exit();
+    }   
     $nome_arquivo = $_FILES['foto']['name'];
     $caminho_temporario = $_FILES['foto']['tmp_name'];
 

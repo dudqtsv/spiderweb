@@ -4,7 +4,6 @@
     $username = $_SESSION['username'];
     $nome = $_SESSION['nome_usuario'];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,5 +35,6 @@
         <a href="filme/">Filmes</a>
         <a href="personagem/">Personagens</a>
     </nav>
+    <a href="logout.php">Sair</a>
 </body>
 </html>

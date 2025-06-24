@@ -26,7 +26,7 @@
     <?php
             require_once "../conexao.php";
 
-        $sql = "SELECT * FROM tb_comentario";
+        $sql = "SELECT * FROM tb_comentario INNER JOIN tb_usuario ON tb_comentario.id_usuario = tb_usuario.id_usuario INNER JOIN tb_filme on tb_comentario.id_filme = tb_filme.id_filme;";
         $comando = mysqli_prepare($conexao, $sql);
 
         mysqli_stmt_execute($comando);
@@ -36,8 +36,8 @@
 
             $id_filme = $_SESSION['id_filme'];
             $texto = $comentario['texto'];
-            $nome_filme = $_SESSION['nome_filme'];
-            $usuario = $_SESSION['username'];
+            $nome_filme = $comentario[''];
+            $username = $comentario['login'];
             echo "<div>";
             echo "<p id='usuario'>$usuario</p>";
             echo "<p id='texto'>$texto</p>";

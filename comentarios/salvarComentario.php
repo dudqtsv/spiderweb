@@ -9,13 +9,17 @@
     $username = $_SESSION['username'];
     $id_usuario = $_SESSION['id_usuario'];
 
+    if (empty($texto)){
+    header("Location: erro.html");
+    exit();
+    }
+
     $sql = "SELECT id_filme FROM tb_filme WHERE nome = '$filme'";
     $comando = mysqli_prepare($conexao, $sql);
 
         mysqli_stmt_execute($comando);
 
         $resultados = mysqli_stmt_get_result($comando);
-        //echo $sql;
 
         while ($filmeid = mysqli_fetch_assoc($resultados)) {
             $id_filme = $filmeid['id_filme'];

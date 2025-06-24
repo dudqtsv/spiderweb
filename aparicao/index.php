@@ -1,11 +1,10 @@
 <?php
 session_start(); //precisa ser a PRIMEIRA coisa no arquivo
 
-$username = $_SESSION['username'];
 require_once "../conexao.php";
 
 // SELECT * FROM tb_livro;
-$sql = "SELECT * FROM tb_aparicao";
+$sql = "SELECT * FROM tb_aparicao INNER JOIN tb_usuario ON tb_aparicao.id_usuario = tb_usuario.id_usuario";
 $comando = mysqli_prepare($conexao, $sql);
 mysqli_stmt_execute($comando);
 $resultados = mysqli_stmt_get_result($comando);
@@ -31,14 +30,15 @@ while ($aparicao = mysqli_fetch_assoc($resultados)) {
     $local = $aparicao['local'];
     $descricao = $aparicao['descricao'];
     $id_usuario = $aparicao['id_usuario'];
-
+    $username = $aparicao['login'];
     echo "<div>";
-    echo "<p id='foto'><img src='fotos/$foto'></p>";
+    echo "<p id='foto'><img src='../fotos/$foto'></p>";
     echo "<p id='local'>$local</p>";
     echo "<p id='descricao'>$descricao</p>";
     echo "<p id='user'>$username</p>";
     echo "</div>";
 }
+
 mysqli_stmt_close($comando);
 ?>
 </html>

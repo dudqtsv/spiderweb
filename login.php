@@ -19,9 +19,11 @@ if (mysqli_num_rows($resultados) == 0) {
     
     $user = mysqli_fetch_assoc($resultados);
     $id_usuario = $user['id_usuario'];
+    $nome_usuario = $user['nome'];
     session_start();
     $_SESSION['username'] = $login;
     $_SESSION['id_usuario'] = $id_usuario;
+    $_SESSION['nome_usuario'] = $nome_usuario;
     header("Location: home.php");
 }
 ?>

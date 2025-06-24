@@ -37,10 +37,11 @@ session_start();
             $foto = $filme['foto'];
         
             echo "<div>";
-            echo "<p id='nome'><img src='nomes/$foto'></p>";
+            echo "<p id='nome'><img src='../fotos/$foto'></p>";
             echo "<p id='foto'>$nome - $ano</p>";
             echo "</div>";
         }
+        $_SESSION['id_filme'] = $id_filme;
         mysqli_stmt_close($comando);    
     ?>
 </body>
