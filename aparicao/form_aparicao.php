@@ -20,7 +20,7 @@
         <p>Foto</p><input type="file" name="foto">
         <p>Local</p><input type="text" name="local">
         <p>Descrição</p><input type="text" name="descricao">
-        <input id="submit" type="submit">
+        <p><input id="submit" type="submit"></p>
         </form>
     </div>
 </body>

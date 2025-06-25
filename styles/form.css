@@ -7,8 +7,8 @@ body {
     flex-direction: column;
 }
 div {
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    height: 400px;
     background-color: rgba(163, 136, 136, 0.267);
     color: black;
     position: absolute;
@@ -39,7 +39,12 @@ a:hover {
 }
 input {
     border-radius: 7px;
+    width: 60%;
 }
 #submit {
+    max-width: 20%;
     margin-top: 7%
+}
+p {
+    font-size: 18px;
 }
