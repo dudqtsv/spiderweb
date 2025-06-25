@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/rosto.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        div{
+            padding-top: 5%;
+        }
+        #submit {
+            margin-top: 0%;
+        }
+    </style>
+    <title>Cadastro</title>
 </head>
 <body>
-    <form action="salvar_usuario.php">
-        Login <input type="text" name="login">
-        Senha <input type="password" name="senha">
-        Nome <input type="text" name="nome">
-        <input type="submit">
-    </form>
+    <div>
+        <h1>Criar conta</h1>
+        <form action="salvar_usuario.php">
+            <p>Login</p><input type="text" name="login">
+            <p>Senha</p><input type="password" name="senha">
+            <p>Nome</p><input type="text" name="nome">
+            <p><input id="submit" type="submit"></p>
+        </form>
+    </div>
+    <a href="../index.php">Cancelar</a>
 </body>
 </html>
