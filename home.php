@@ -7,6 +7,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/rosto.png" type="image/x-icon">
@@ -15,8 +18,8 @@
     <style>
         body {
             font-weight: bold;
-            background-color: rgb(58, 0, 0);
-            color: antiquewhite;
+            background-color: #b30000;
+            color: #f0f0f0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -42,8 +45,8 @@
         .coisa {
             scale: 1.2;
             width: 20vh;
-            color: white;
-            background-color: rgb(230, 0, 0);
+            color: antiquewhite;
+            background-color:rgba(0, 0, 0, 0.58);
             padding-left: 15px;
             padding-right: 15px;
             padding-top: 15px;
@@ -56,7 +59,7 @@
             justify-content: center;
         }
         .coisa:hover {
-            background-color: rgb(180, 0, 0);
+            background-color:rgba(0, 0, 0, 0.83);
         }
 
         #sair {
@@ -70,14 +73,14 @@
         }
 
         #sair:hover {
-            background-color: rgba(207, 0, 0, 0.35);
+            background-color:rgba(0, 0, 0, 0.44);
         }
         #eu {
             color: antiquewhite;
             text-decoration:none;
         }
         #eu:hover {
-            color:rgb(230, 0, 0);
+            color: #b30000;
         }
         footer {
             color: antiquewhite;
@@ -86,7 +89,7 @@
             left: 0;
             height: 3%;
             width: 100%;
-            background-color: rgba(230, 0, 0, 0.45);
+            background-color:rgba(0, 0, 0, 0.58);
             text-align: center;
             padding-left: 15px;
             padding-right: 15px;
