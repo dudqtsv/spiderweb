@@ -39,7 +39,7 @@ while ($aparicao = mysqli_fetch_assoc($resultados)) {
     echo "<div class='card'>";
         echo "<p class='coisa'><img src='../fotos/$foto'></p>";
         echo "<p class='coisa'>Local: $local</p>";
-        echo "<p class='coisa'>Descrição:$descricao</p>";
+        echo "<p class='coisa'>Descrição: $descricao</p>";
         echo "<p class='coisa'>User: $username</p>";
     echo "</div>";
 }

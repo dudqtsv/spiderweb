@@ -17,6 +17,7 @@
     <title>SpiderWeb</title>
     <style>
         body {
+            font-family: "Poppins";
             font-weight: bold;
             background-color: #b30000;
             color: #f0f0f0;

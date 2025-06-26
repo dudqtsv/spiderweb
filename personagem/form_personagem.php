@@ -11,7 +11,7 @@
     <title>Cadastro</title>
     <style>
         div {
-            height:400px;
+            height: 520px;
         }
         h1 {
             margin-bottom:-5%;

@@ -22,7 +22,7 @@ session_start();
 <body>
     <h1>Personagens</h1>
 
-    <a href="../home.php">Voltar</a> <br>
+    <a id="voltar" href="../home.php">Voltar</a> <br>
     <p>Seu personagem favorito não está cadastrado? <a href="form_personagem.php">Cadastre-o</a>!</p> 
     <h2>Aliados</h2>
     <?php
@@ -66,10 +66,10 @@ session_start();
             $nome = $inimigo['nome'];
             $foto = $inimigo['foto'];
             $descricao = $inimigo['descricao'];
-            echo "<div>";
-            echo "<p id='coisa'><img src='../fotos/$foto'></p>";
-            echo "<p id='coisa'>$nome</p>";
-            echo "<p id='coisa'>$descricao</p>";
+            echo "<div class='card'>";
+            echo "<p class='coisa'><img src='../fotos/$foto'></p>";
+            echo "<p class='coisa'>$nome</p>";
+            echo "<p class='coisa'>$descricao</p>";
             echo "</div>";
         }
         mysqli_stmt_close($comando);  
