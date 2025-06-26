@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(58, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+p {
+    color: antiquewhite;
+}
+h1 {
+    margin: 20px 0;
+    color: antiquewhite;
+}
+
+img{
+    width: 18vh;
+    margin-bottom: 10px;
+}
+a {
+    color: rgb(190, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#voltar {
+    margin-bottom: 5vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+#voltar:hover {
+    background-color: rgba(207, 0, 0, 0.35);
+}
+div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-right: 5vh;
+}
+.card {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: 0.2s;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.coisa {
+    flex-direction: col;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #000000;
+    margin: 2vh 2vh;
+}
+.coisa img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+}

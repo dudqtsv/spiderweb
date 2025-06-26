@@ -12,6 +12,7 @@ $resultados = mysqli_stmt_get_result($comando);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../styles/lista.css">
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../img/rosto.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,9 @@ $resultados = mysqli_stmt_get_result($comando);
     <link rel="stylesheet" href="style.css">
 </head>
 
+<img src="../img/aranha.png" alt="">
 <h1>Aparições do Homem Aranha</h1>
-<a href='../home.php'>Voltar</a> <br>
+<a id="voltar" href='../home.php'>Voltar</a> <br>
 <p>Viu o Homem Aranha por aí? <a href='form_aparicao.php'>Faça sua postagem</a>!</p>
 
 </body>
@@ -31,11 +33,11 @@ while ($aparicao = mysqli_fetch_assoc($resultados)) {
     $descricao = $aparicao['descricao'];
     $id_usuario = $aparicao['id_usuario'];
     $username = $aparicao['login'];
-    echo "<div>";
-    echo "<p id='foto'><img src='../fotos/$foto'></p>";
-    echo "<p id='local'>$local</p>";
-    echo "<p id='descricao'>$descricao</p>";
-    echo "<p id='user'>$username</p>";
+    echo "<div class='card'>";
+        echo "<p class='coisa'><img src='../fotos/$foto'></p>";
+        echo "<p class='coisa'>Local: $local</p>";
+        echo "<p class='coisa'>Descrição:$descricao</p>";
+        echo "<p class='coisa'>User: $username</p>";
     echo "</div>";
 }
 
