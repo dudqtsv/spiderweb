@@ -44,8 +44,7 @@
         
         $resultados = mysqli_stmt_get_result($comando);
         while ($comentario = mysqli_fetch_assoc($resultados)) {
-
-            $id_filme = $_SESSION['id_filme'];
+            // $id_filme = $_SESSION['id_filme'];
             $texto = $comentario['texto'];
             $usuario = $comentario['username'];
             $nome_filme = $comentario['nome_filme'];

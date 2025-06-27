@@ -23,7 +23,7 @@
     <div>
         <h1>Cadastro de personagem</h1>
         <form action="salvarPersonagem.php" method="POST" enctype="multipart/form-data">
-            <p>Tipo de personagem: <input type="radio" name="alimigo" value="aliado"> Aliado
+            <p>Tipo de personagem: <input type="radio" name="alimigo" value="aliado" checked> Aliado
             <input type="radio" name="alimigo" value="inimigo"> Inimigo
             <p>Nome:</p><input type="text" name="nome">
             <p>Descrição:</p><input type="text" name="descricao">

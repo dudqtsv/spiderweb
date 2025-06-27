@@ -1,4 +1,5 @@
 <?php
+//acho q nao precisa mais do session
 session_start(); //precisa ser a PRIMEIRA coisa no arquivo
 
 require_once "../conexao.php";

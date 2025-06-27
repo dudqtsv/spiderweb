@@ -60,6 +60,7 @@
             justify-content: center;
         }
         .coisa:hover {
+            transition: 0.5s;
             background-color:rgba(0, 0, 0, 0.83);
         }
 
@@ -74,6 +75,7 @@
         }
 
         #sair:hover {
+            transition: 0.5s;
             background-color:rgba(0, 0, 0, 0.44);
         }
         #eu {

@@ -19,7 +19,7 @@ session_start();
     <h1>Filmes</h1>
     <a id="voltar" href="../home.php">Voltar</a> 
     <p id="comentario">Seu filme favorito não está cadastrado? <a href="form_filme.php">Cadastre-o</a>!</p> 
-    <a href='../comentarios/' id='comentarios'>Comentários</a>
+    <p><a href='../comentarios/' id='comentarios'>Comentários</a></p>
     <?php
         require_once "../conexao.php";
 
@@ -42,7 +42,7 @@ session_start();
                 echo "<p id='coisa'>$nome - $ano</p>";
             echo "</div>";
         }
-        $_SESSION['id_filme'] = $id_filme;
+       // $_SESSION['id_filme'] = $id_filme;
         mysqli_stmt_close($comando);    
     ?>
 </body>
